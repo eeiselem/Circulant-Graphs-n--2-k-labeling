@@ -56,3 +56,8 @@ because its objective is not just to find any valid labeling, but to discover th
 to the defined criteria (minimal k, with minimal label sum as a tiebreaker). Therefore, even if an optimal
 path is found early, the algorithm explores or prunes other branches sufficiently to confirm that no better
 solution exists.
+
+
+Asim, Ahsan & Hasni, Roslan & Ahmad, Ali & Assiri, Basem & Semaničová -Feňovčíková, Andrea. (2021).
+Irregularity Strength of Circulant Graphs Using Algorithmic Approach. IEEE Access. PP. 1-1.
+10.1109/ACCESS.2021.3058786.
