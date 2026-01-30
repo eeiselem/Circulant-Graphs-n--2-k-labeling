@@ -1,7 +1,7 @@
 # Circulant-Graphs-(n,r-2)-k-labeling
 Using branch and bound algorithmic approach
 
-Best data structure to store graph
+## Best data structure to store graph
 The recursive structure of the solve function relies heavily on the implicit call stack to manage the Depth -
 First Search. Each recursive call adds a new layer to this stack, storing local variables like the current
 node index, loop counters, and references to the shared state (labels, sums). This stack mechanism
@@ -10,7 +10,7 @@ previous layer, naturally ‘backtracking’. Since essentially only one path is
 is highly memory-efficient compared to algorithms that might need to store wider sections of the search
 tree simultaneously
 
-Design strategy
+## Design strategy
 The algorithm recursively searches for complete labelings or encounters dead -end results where
 constraints cannot be met. When it reaches either state, it ‘backtracks’ by undoing the last label
 assignment and attempting the next valid label for the current node, potentially backtracking further up
@@ -29,7 +29,7 @@ Note: This implementation requires unique vertex labels and unique edge sums. Al
 vertex labels do work for n=5 (when r=n-3), this exception is disallowed in the code to avoid the
 significant computational complexity it would introduce for o ther graph sizes.
 
-How traversing will be applied
+## How traversing will be applied
 This algorithm does not traverse the original graph in a meaningful sense but rather traverses the state -
 space tree that forms transiently during its execution. This tree is not explicitly built; it is more of a
 conceptual model that underlies how the algorithm explores possible solutions. The traversal of this state-
@@ -39,7 +39,7 @@ explores the next alternative branch, and potentially starts another traversal d
 returning from a recursive call, is when the backtracking step occurs: the algorithm undoes the last
 assignment and prepares to explore the next available branch.
 
-Time complexity of algorithm
+## Time complexity of algorithm
 The worst-case time complexity could be characterized as O(cn), where n is the number of vertices and c
 is some greater than 1 representing the effective branching factor. A potential upper bound of O(nn) might
 be considered if the algorithm explored a complete search tree where each of the n levels had a branching
